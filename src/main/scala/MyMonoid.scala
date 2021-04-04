@@ -2,7 +2,7 @@
  * This is not really a perfect Monoid because A Monoid extends from a Semigroup( Which has the combine part of a Monoid).
  * Monoids in cats only have an empty method, they extend from Semigroup the combine method.
  */
-
+import cats.instances.option
 trait MyMonoid[T] {
   def combine(first: T, second: T): T
   def empty: T

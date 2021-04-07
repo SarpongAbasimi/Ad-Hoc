@@ -40,5 +40,11 @@ object Main {
      *
      * sounds crazy right? Try it.
      * */
+
+    val aListOfNumbers = List(1,2,3)
+    val functionToApplyToList: (Int)=> Some[String] = a => Some(a.toString)
+    val c = Traverse[List].traverse[Option, Int, String](aListOfNumbers)(functionToApplyToList)
+    // Some(List("1","2","3"))
+    println(c)
   }
 }
